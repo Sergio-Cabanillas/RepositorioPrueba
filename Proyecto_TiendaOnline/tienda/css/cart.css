@@ -1,0 +1,195 @@
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: lightgray;
+    color: black;
+}
+
+.contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(31, 22, 22);
+}
+
+aside {
+    background-color: lightskyblue;
+    color: black;
+    padding: 20px;
+    width: 250px;
+    height: 380px;
+}
+
+aside header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+aside .title {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside nav ul li {
+    margin-bottom: 10px;
+}
+
+aside nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.boton-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boton-carrito .numero {
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+aside nav ul li a i {
+    margin-right: 8px;
+}
+
+aside footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.principal {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: left;
+    color: black;
+}
+
+.contenedor-carrito {
+    background-color: lightskyblue;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carrito-vacío {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.carrito-productos {
+    margin-top: 20px;
+}
+
+.carrito-producto {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0px 20px rgba(31, 22, 22);
+    gap: 15px;
+}
+
+.carrito-producto img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Mismo espacio para cada dato de información del producto */
+.carrito-producto-titulo,
+.carrito-producto-cantidad,
+.carrito-producto-subtotal {
+    flex: 1;
+}
+
+.carrito-producto-eliminar {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+}
+
+/* Alinear los botones de acción horizontalmente con flexbox */
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.carrito-acciones button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.carrito-acciones button:hover {
+    background-color: #007bff;
+}
+
+.carrito-acciones-total {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Detalles de los prodcutos añadidos organizados horizontalmente */
+.carrito-producto-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex: 2;
+}
+
+/* Hacer el diseño responsive en pantallas más pequeñas para que 
+el diseño se vuelva vertical*/
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    /* mostrar los productos del carrito en columna vertical */
+    .carrito-producto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* separación entre el botón de vaciar y de comprar de 10px */
+    .carrito-acciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

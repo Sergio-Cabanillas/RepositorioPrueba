@@ -1,0 +1,177 @@
+
+/* Selector universal para eliminar márgenes y rellenos por defecto
+box-sizing para que el tamaño total incluya el padding y el borde */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente Arial, fondo de color blanco, texto de color negro con espacio vertical de 1.5
+para que la legibilidad del texto sea mejor */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: black;
+  line-height: 1.5;
+}
+
+/* Ancho del contenedor principal de la página adaptado al 90% del ancho de la ventana,
+máximo de 1200px, contenido centrado con margin: 0 auto */
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Encabezado de la página con fondo gris claro con borde negro de 3px en la parte inferior, padding
+vertical de 20px para separar el contenido */
+header {
+  background-color: lightgray;
+  padding: 20px 0;
+  border-bottom: 3px solid black;
+}
+
+/* Título principal con tamaño grande de 28px, letra en negrita para resaltar el eslogan */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Eliminar los puntitos de cada elemento de la lista, flexbox para organizar los items en
+horizontal, texto alineado a la derecho, espacio con gap 20px entre los elementos */
+.principal ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: right;
+  margin-top: 10px;
+}
+
+/* Al pasar el cursor por encima de los enlaces el color del texo cambia a color azul */
+.principal a:hover {
+  color: #007bff;
+}
+
+/* Sección principal de la página con fondo de color azul claro, texto centrado,
+padding de 100px arriba y 20px derecha para darla espacio, borde inferior negro de 3px */
+.intro {
+  background-color: lightskyblue;
+  color: black;
+  text-align: center;
+  padding: 100px 20px;
+  border-bottom: 3px solid black;
+}
+
+/* Título con la fuente grande de 36px, margen inferior de 10px */
+.intro h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Párrafos con 18px de tamaño de letra, margen inferior de 20px */
+.intro p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Botón de enlace a la tienda tratado como elemento de bloque en línea, fondo negro
+color de letra blanca, padding interno de 12px arriba y 24px derecha para darle espacio al texto,
+con borde redondeado y sin subrayado */
+.tienda {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Al pasar el cursor por encima del botón de enlace el fondo cambiará a color azul */
+.tienda:hover {
+  background-color: #007bff;
+}
+
+/* Sección de los productos de muestra con 60 px de padding y color gris de fondo */
+.productos {
+  padding: 60px 0;
+  background-color: lightgray;
+}
+
+/* Título del nombre de los productos alineado al centro, con margen inferior de 40px,
+tamaño de fuente de 28px */
+.productos h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+/* Contenedor de los productos de muestra con grid responsive, esto hace que las columnas 
+se ajusten automáticamente con el espacio disponible, mínimo 250px cada uno, 
+espacio gap 30px entre los porductos */
+.prendas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+/* Tarjetas de los productos con fondo de color azul claro, padding de 20px,
+borde negro redondeado de 3px, texto alineado al centro */
+.producto {
+  background-color: lightskyblue;
+  padding: 20px;
+  border: 3px solid black;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Imágenes de los productos que se han tomado adaptadas al ancho del tamaño del contendor,
+esquinas redondeadas de 6px, margen inferior de 15px*/
+.producto img {
+  max-width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* Título h3 de los productos con 18px de tamaño de letra, margen inferior 8px */
+.producto h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+/* Texto del precio en color azulñ y negrita */
+.producto p {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Píe de página con el texto centrado, en cursiva, negrita, fondo de color blanco,
+padding de 20px, tamaño de 15px de letra */
+footer {
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Menú de navegación con responsive visual, el texto se organiza en columna y se centra,
+el tamaño del texto se reduce para ventanas o pantallas pequeñas. */
+@media (max-width: 768px) {
+
+  .principal ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .intro h2 {
+    font-size: 28px;
+  }
+
+  .intro p {
+    font-size: 16px;
+  }
+}
+

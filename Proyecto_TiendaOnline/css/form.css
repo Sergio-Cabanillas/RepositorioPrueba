@@ -1,0 +1,120 @@
+
+/* Selector universal para eliminar márgenes y rellenos por defecto
+box-sizing para que el tamaño total incluya el padding y el borde */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente arial para todo el texto de la página, margen de 20px alrededor del body, clor gris de fondo */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+/* margin 0 auto para centrar el contenido, limitar el ancho del contenedor maximo a 800px
+fondo de color azul y padding de 30px */
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #65a6eb;
+    padding: 30px;
+}
+
+/* Color de texto negro en los títulos h1 y h2 centrados y con margen inferior de 20 px */
+h1, h2 {
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Flexbox para organizar elementos en línea horizontal con margen inferior de 30px */
+.opciones {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/* Opciones alineadas en el centro, padding de 20px, margenes de 10px, borde redondeado 
+y color de fondo azul claro */
+.opcion {
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+    
+/* Los enlaces dentro de las opciones son de color negro con subrayado, */
+.opcion a {
+    text-decoration: underline;
+    color: black;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Al poner el cursor por encima de los enlaces el color cambia a azul mas intenso */
+.opcion a:hover {
+    color: #007bff;
+}
+
+/* La seccion del formulario va separada con un margen superior de 30 px
+borde negro redondeado de 3px con esquinas redondeadas de 5px y fondo de color azul claro */
+.form-seccion {
+    margin-top: 30px;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+
+/* Espacio inferior de 15px entre los campos del formulario */
+.form {
+    margin-bottom: 15px;
+}
+
+/* Tratar los elementos label como bloque, para separar con un margen inferior de 5px,
+texto mostrado en negrita */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Quitar 120px al 100% calculando el ancho toal del contenedor, de esta forma
+se alinean el campo de email y el textarea, padding de 8px, borde redondeado
+con box-sizing */
+input[type="email"], 
+textarea {
+    width: calc(100% - 120px);
+    padding: 8px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botón negro con texto en blanco, padding sin borde, con esquinas redondeadas y fuente de 16px */
+button[type="submit"] {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Al pasar el cursosr por encima de los botones el color cambia a azul*/
+button[type="submit"]:hover {
+    background-color: #007bff;
+}
+
+/* Texto del pié de página centrado, en negrita, letra cursiva y margen superior de 30px */
+.info {
+    color: black;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}

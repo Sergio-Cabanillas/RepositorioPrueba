@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bienvenido</title>
+  <!-- Favicon para darle una marca a las pestañas de la páginas -->
+  <link rel="icon" type="image/icon" href="img/icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- Encabezado de la página principal con el eslogan -->
+  <header>
+    <div class="contenedor">
+      <h1 class="title">Encuentra tu prenda ideal</h1>
+      <!-- menú de navegación para navegar entre las pestañas que componen la página -->
+      <nav class="principal">
+        <ul>
+          <li>
+            <!-- enlace con el incio de la página (Home) -->
+            <a href="index.html">Inicio</a> 
+            <i class="fa-sharp fa-solid fa-house" style="color: #0033ff;"></i>
+          </li>
+          <li>
+            <!-- enlace al inicio de sesión -->
+            <a href="login.html">Inicia sesión</a> 
+            <i class="fa-sharp fa-solid fa-circle-user" style="color: #0033ff;"></i>
+          </li>
+          <li>
+            <!-- enlace al registro para crear una cuenta -->
+            <a href="registro.html">Regístrarse</a> 
+            <i class="fa-sharp fa-solid fa-user" style="color: #0033ff;"></i>
+          </li>
+          <li>
+            <!-- enlace directo a la tienda -->
+            <a href="tienda/tienda.html">Catálogo</a> 
+            <i class="fa-sharp fa-solid fa-shirt" style="color: #0033ff;"></i>
+          </li>
+          <li>
+            <!-- enlace directo al carrito de compra -->
+            <a href="tienda/carrito.html">Carrito</a> 
+            <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #0033ff;"></i>
+          </li>
+          <li>
+            <!-- enlace directo a los formularios de contacto -->
+            <a href="formulario.html">Contacto</a> 
+            <i class="fa-sharp fa-solid fa-phone" style="color: #0033ff;"></i>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección de Introducción para acceder directamente al catálogo de la tienda -->
+  <section class="intro">
+    <div class="intro-contenido">
+      <h2>Ropa para hombre y mujer</h2>
+      <p>Descubre nuestra colección de pantalones para hombre y mujer</p>
+      <a href="tienda/tienda.html" class="tienda">Comprar Ahora</a>
+    </div>
+  </section>
+
+  <!-- Sección de muestra de los productos -->
+  <section class="productos">
+    <div class="contenedor">
+      <h2>Productos Destacados</h2>
+      <div class="prendas">
+
+        <!-- Cards con los productos de muestra (Ropa) -->
+        <div class="producto">
+          <img src="img/pantalon2H.jpg" alt="Pantalón hombre" title="Pantalón vaquero beige de hombre">
+          <h3>Pantalón vaquero hombre</h3>
+          <p>€19.99</p>
+        </div>
+
+        <div class="producto">
+          <img src="img/pantalon2M.jpg" alt="Pantalón hombre" title="Pantalón vaquero beige de hombre">
+          <h3>Pantalón vaquero mujer</h3>
+          <p>€19.99</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="contenedor">
+      <p>&copy; 2025 Tienda de ropa online. Tus prendas al mejor precio.</p>
+    </div>
+  </footer>
+
+  <!-- Script para con el kit de font awesome para mostrar los iconos del menú de navegación -->
+  <script src="https://kit.fontawesome.com/90d03dec9f.js" crossorigin="anonymous"></script>
+  
+</body>
+</html>

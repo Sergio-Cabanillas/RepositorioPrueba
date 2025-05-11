@@ -1,0 +1,111 @@
+
+/* Selector universal para eliminar márgenes y rellenos por defecto
+box-sizing para que el tamaño total incluya el padding y el borde */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Texto del cuerpo de la página con fuente arial, alineado en el centro
+fondo de color gris claro, uso de flexbox para alinear elementos en vertical, 
+centrar los elementos en columnas, ocupar toda la altura la página con 100vh */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Encabezado que cubre el 100% del ancho de la página con fondo azul claro, 
+padding de 40px arriba y 20 darecha, texto centrado */
+header {
+    background-color: lightskyblue;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Ancho máximo del contenedor de 600px con el contenido centrado */
+header .contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Título del encabezado con 2 veces el tamaño de fuente normal con margen inferior 10px */
+header h2.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Enlace de color azul, en negrita, sin subrayado por defecto */
+header a {
+    color: blue; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Al colocar el cursor encima del enlace se subraya */
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Sección del login de usuario con fondo de color azul claro, borde de 8px redondeado,
+sombra con difuminado negro de 20px, margen superior de 40 px, texto centrado
+se limita 400px de ancho, adaptado 90% de la pantalla */
+section.login {
+    background-color: lightskyblue;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgb(31, 22, 22);
+    padding: 30px;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título del login con 2 veces el tamaño normal, margin inferior de 20px */
+section.login h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Formulario separado verticalmente con flexbox en columnas gap de 15px */
+section.login form#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Campos de email y contraseña con padding de 12px, borde negro de 1 px, 
+esquinas redondeadas de 6px */
+section.login input[type="email"],
+section.login input[type="password"] {
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+/* Al hacer clic en los campos se resaltarán con borde de color negro */
+section.login input[type="email"]:focus, 
+section.login input[type="password"]:focus {
+    border: solid 1px black;
+}
+
+/* Botón de "entrar" con fondo de color negra, texto en blanco, sin borde,
+esquinas redondeadas, padding 12px arriba y 20px abajo, tamaño letra de 18px */
+section.login button[type="submit"] {
+    background-color: black; 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 18px;
+}
+
+/* Al pasar el cursor por encima el botón cambia a color azul */
+section.login button[type="submit"]:hover {
+    background-color: #007bff;
+}

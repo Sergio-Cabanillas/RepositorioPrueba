@@ -1,0 +1,112 @@
+
+/* Selector universal para eliminar márgenes y rellenos por defecto
+box-sizing para que el tamaño total incluya el padding y el borde */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente Arial, fondo de color gris, texto negro, uso de flexbox para centrar los elementos
+en columnas, min-height de 100vh para que el contenido toda la altura de la página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgrey;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* El encabezado ocupa todo el ancho con fondo de azul claro, padding amplio de
+40px arriba y 20px derecha, texto centrado*/
+header {
+    background-color: lightskyblue;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Centrar el contenido del encabezado y darle el limite máximo de 600px de ancho */
+header .contenedor {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Título del encabezado con tamaño grande (2 veces superior) y margen inferior de 10px */
+header h2.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Enlace de color azul y en negrita sin subrayado por defecto, */
+header a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Al pasar el cursor por encima del enlace se subrayará */
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Sección del registro de usuario con texto centrado, fondo de color azul claro, borde redondeado 
+de 8px sombra de color negro con 20px de difuminado, padding de 30px, margen superior de 40px, y ancho
+adaptado que no supere como máximo los 400px de la página */
+section.registro {
+    background-color: lightskyblue;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgb(31, 22, 22);
+    padding: 30px;
+    margin-top: 40px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título con 1.8 de veces el tamaño normal, margen inferior de 20px */
+section.registro h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+/* Uso de Flexbox para dejar los formularios en columna con espacio de 15px (gap)
+entre los campos */
+section.registro form#form-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Campos de email y password con padding de 12px, borde redondeado de 6px de color negro */
+section.registro input[type="email"],
+section.registro input[type="password"] {
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 6px;
+}
+
+/* Al hacer click en los campos se resaltarán con un borde negro */
+section.registro input[type="email"]:focus,
+section.registro input[type="password"]:focus {
+    border: solid 1px black;
+}
+
+/* Botón de envío con fondo negro, texto en blanco, bordes redondeados de 6px, 
+sin que sean visibles */
+section.registro button[type="submit"] {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    font-size: 18px;
+}
+
+/* Al pasar el cursor por encima de los botones de envío, el fondo del color
+de los botones cambia a azul */
+section.registro button[type="submit"]:hover {
+    background-color: #007bff;
+}

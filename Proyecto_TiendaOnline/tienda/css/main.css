@@ -1,0 +1,194 @@
+
+
+/* Fuente arial, texto centrado, color de fondo gris claro */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: lightgray;
+}
+
+/* uso de flexbox para poner el aside y el main con el catálogo de los productos
+juntos al lado del otro, limite de 1200px de ancho, sombra negra con difuminado 20px */
+.contenedor {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(31, 22, 22);
+}
+
+/* fondo del aside del carrito con colo azul claro, padding de 20px, ancho de 800px y
+altura de 250px */
+aside {
+    background-color: lightskyblue;
+    padding: 20px;
+    width: 800px;
+    height: 250px;
+}
+
+/* Encabezado con margen inferior de 20px, texto centrado*/
+aside header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Eliminar los símbolos por defecto  */
+aside nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Separación de los elementos del menú */
+aside nav ul li {
+    margin-bottom: 10px;
+}
+
+/* Botones y enlaces con fondo negro, texto en blanco y esquinas redondeadas,
+sin borde, texto a la izquierda */
+aside nav ul li button,
+aside nav ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+/* flexbox para que el botón con el icono del carrito y el número de prodcutos 
+en una misma línea, dejando espacio a ambos lados y centrados */
+aside nav ul li a.boton-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* numero de cantidad en el carrito en un círculo rojo */
+aside nav ul li a.boton-carrito .numero {
+    background-color: red;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+/* Margen derecho de 8px entre el icono y el texto */
+aside nav ul li button i,
+aside nav ul li a i {
+    margin-right: 8px;
+}
+
+/* Pie del aside con margen superior de 20px, con el texto centrado */
+aside footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Contenido principal con margen de 5px y padding de 10px */
+main {
+    margin: 5px;
+    padding: 10px;
+}
+
+/* Título principal del encabezado de 2 veces el tamaño normal, sin margin superior,
+texto alineado a la izquierda */
+main .principal {
+    font-size: 2em;
+    margin-top: 0px;
+    text-align: left;
+}
+
+/* Uso de flexbox para separar el los prodcutos, gap de 20px de separación */
+.contenedor-productos {
+    display: flex;
+    gap: 20px;
+}
+
+/* Fondo de color azul claro para cada producto, diseño flexbox para
+dejar los productos en horizontal, borde negro de 3px */
+.producto {
+    background-color: lightskyblue;
+    border: solid 3px black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagen adaptada añl ancho del contendor */
+.producto img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Uso de flexbox para que el contenedor del los detalles del producto y botón 
+alineado en columnas en horizontal */
+.detalles {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+/* Margen inferior de 5px para el nombre de los productos */
+.producto-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+/* precio de color azul en negrita, margen inferior de 10px */
+.precio {
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Botón de enlace añadir con color de fondo negro, letra blanca, sin borde visible,
+padding de 10px arriba y 15px abajo, esquinas redondeadas, texto centrado,
+tratado como elemento de bloque en línea, sin subrayado */
+.añadir {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Al pasar el cursor por encima del botón cambiará el fondo a color azul */
+.añadir:hover {
+    background-color: #007bff;
+}
+
+/* A partir de 768px de ancho el aside se coloca encima del main, 
+ocupando todo el ancho para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    aside nav ul li button,
+    aside nav ul li a {
+        text-align: center;
+    }
+}
+
+/* Mostrar una sola columna de productos en móviles para que se vea mejor
+con grid template */
+@media (max-width: 480px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+}

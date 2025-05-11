@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="icon" type="image/icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+
+<body>
+    <!-- Sección contenedora del título principal del formulario -->
+    <div class="contenedor">
+        <h1>¿Problemas o dudas con la compra de un pedido?</h1>
+        <div class="opciones">
+            <div class="opcion">
+                <h2>Reclamaciones</h2>
+                <p>Si tienes alguna reclamación sobre nuestros servicios o productos.</p>
+                <!-- enlace para dirigirse al formulario de reclmaciones -->
+                <a href="#formulario-reclamaciones">Rellena nuestro Formulario de Reclamación</a>
+            </div>
+            <div class="opcion">
+                <h2>Consulta de Pedidos</h2>
+                <p>Para cualquier duda sobre el estado de tu pedido.</p>
+                <!-- enlace para deirigirse al formulario de pedidos -->
+                <a href="#formulario-pedidos">Envíanos un correo en la Consulta de Pedidos</a>
+            </div>
+        </div>
+
+        <!-- Sección con el formulario de reclamaciones -->
+        <div id="formulario-reclamaciones" class="form-seccion">
+            <h2>Formulario de Reclamaciones</h2>
+            <p>Por favor, detalla tu reclamación en el siguiente formulario.</p>
+            <form action="#" method="post"> <div class="form">
+                    <label for="nombre-reclamacion">Nombre:</label>
+                    <input type="text" id="nombre-reclamacion" name="nombre-reclamacion" required>
+                </div>
+                <div class="form">
+                    <label for="email-reclamacion">Correo Electrónico:</label>
+                    <input type="email" id="email-reclamacion" name="email-reclamacion" required>
+                </div>
+                <div class="form">
+                    <label for="asunto-reclamacion">Asunto:</label>
+                    <input type="text" id="asunto-reclamacion" name="asunto-reclamacion" value="Reclamación" readonly>
+                </div>
+                <div class="form">
+                    <label for="mensaje-reclamacion">Mensaje:</label>
+                    <textarea id="mensaje-reclamacion" name="mensaje-reclamacion" rows="5" required></textarea>
+                </div>
+                <!-- botón de envío de reclamaciones -->
+                <button type="submit">Enviar Reclamación</button>
+            </form>
+        </div>
+
+        <!-- Sección con el formulario de pedidos -->
+        <div id="formulario-pedidos" class="form-seccion">
+            <h2>Consulta de Pedidos</h2>
+            <p>Introduce tu número de pedido y tu consulta.</p>
+            <form action="#" method="post"> <div class="form">
+                    <label for="nombre-pedido">Nombre:</label>
+                    <input type="text" id="nombre-pedido" name="nombre-pedido" required>
+                </div>
+                <div class="form">
+                    <label for="email-pedido">Correo Electrónico:</label>
+                    <input type="email" id="email-pedido" name="email-pedido" required>
+                </div>
+                <div class="form">
+                    <label for="numero-pedido">Número de Pedido:</label>
+                    <input type="text" id="numero-pedido" name="numero-pedido" required>
+                </div>
+                <div class="form">
+                    <label for="consulta-pedido">Consulta:</label>
+                    <textarea id="consulta-pedido" name="consulta-pedido" rows="5" required></textarea>
+                </div>
+                <!-- botón con el envío de consultas -->
+                <button type="submit">Enviar Consulta</button>
+            </form>
+        </div>
+
+        <!-- Sección de pie de página con el teléfono de contacto y el horario de atención al cliente -->
+        <div class="info">
+            <p>También puedes contactarnos por teléfono al <a href="tel:+34123456789">+34 123 456 789</a> (Horario de atención: L-V de 8:00 a 14:00).</p>
+        </div>
+    </div>
+
+</body>
+</html>

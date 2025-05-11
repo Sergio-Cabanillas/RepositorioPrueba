@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduce tus datos</title>
+    <link rel="icon" type="image/icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/form-registro.css">
+</head>
+
+<body>
+    
+    <!-- Encabezado principal con el mensaje de bienvenida para el registro de nuevos usuarios -->
+    <header>
+        <div class="contenedor">
+            <h2 class="title">¡Bienvenido! ¡Regístrate en nuestra Tienda!</h2>
+            <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a></p>
+        </div>
+    </header>
+
+    <!-- Sección de los campos de registro con el email y la contraseña (con confirmación) para crear una nueva cuenta -->
+    <section class="registro">
+        <div class="contenedor">
+            <h3>Crear una cuenta</h3>
+            <form id="form-registro">
+                <input type="email" name="email" placeholder="Correo electrónico" required>
+                <input type="password" name="contraseña" placeholder="Contraseña" required>
+                <input type="password" name="confirmar_contraseña" placeholder="Repetir contraseña" required>
+                <!-- botón de validar usuario y contraseña para crear la cuenta nueva y registrarse -->
+                <button type="submit">Crear cuenta</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Script de JavaScript para validar contraseña o comprobar que haya errores en ella -->
+    <script src="js/password.js"></script>
+
+</body>
+</html>

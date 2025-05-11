@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de productos</title>
+    <link rel="icon" type="image/icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Sección con el contenido de los productos que componen el catálogo de la tienda -->
+    <div class="contenedor">
+        <aside>
+            <header>
+                <h1 class="title">Catálogo de la tienda</h1>
+            </header>
+
+            <!-- Botón con el enlace del carrito para dirigirse a él directamente -->
+            <nav>
+                <ul>
+                    <li>
+                        <a class="boton-carrito" href="carrito.html">
+                            <!-- icono con el carrito de compra -->
+                            <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #0033ff;"></i> Carrito <span class="numero">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Pie del aside con el copyright -->
+            <footer>
+                <p class="texto-footer">&copy; 2025 Tienda de ropa online. Tus prendas al mejor precio.</p>
+            </footer>
+        </aside>
+
+        <!-- Sección principal con el catálogo de todoslos productos de la tienda -->
+        <main>
+            <h2 class="principal">Todos los productos</h2>
+            <!-- contenedor de las cards de los productos con sus detalles imagen, precios y título -->
+            <div id="contenedor-productos" class="contenedor-productos">
+                <div class="producto">
+                    <img src="img/pantalon1H.jpg" alt="Pantalón" title="Pantalón de hombre">
+                    <div class="detalles">
+                        <h3 class="producto-title">Pantalón color negro hombre</h3>
+                        <p class="precio">20€</p>
+                        <!-- botón para añadir la unidad producto al carrito y poder comprarlo -->
+                        <button class="añadir">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="img/pantalon2H.jpg" alt="Pantalón" title="Pantalón de hombre">
+                    <div class="detalles">
+                        <h3 class="producto-title">Pantalón color beige hombre</h3>
+                        <p class="precio">20€</p>
+                        <button class="añadir">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="img/pantalon1M.jpg" alt="Pantalón" title="Pantalón de mujer">
+                    <div class="detalles">
+                        <h3 class="producto-title">Pantalón color azul mujer</h3>
+                        <p class="precio">20€</p>
+                        <button class="añadir">Añadir al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <img src="img/pantalon3M.jpg" alt="Pantalón" title="Pantalón de mujer">
+                    <div class="detalles">
+                        <h3 class="producto-title">Pantalón color verde oliva mujer</h3>
+                        <p class="precio">20€</p>
+                        <button class="añadir">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- script de font awesome para mostrar el icono del carrito de compra -->
+    <script src="https://kit.fontawesome.com/90d03dec9f.js" crossorigin="anonymous"></script>
+    <!-- script de JavaScript para que los productos se vayan acumulando en el carrito al hacer click en "Añadir" -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

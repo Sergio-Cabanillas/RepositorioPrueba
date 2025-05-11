@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu carrito de compra</title>
+    <link rel="icon" type="image/icon" href="img/icon.png">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+
+    <!-- sección con el aside para añadir el carrito de la compra a la tienda -->
+    <div class="contenedor">
+        <aside>
+            <header>
+                <h1 class="title">Carrito</h1>
+            </header>
+
+            <nav>
+                <ul>
+                    <li>
+                        <!-- botón con enlace para volver al catálogo de la tienda -->
+                        <a class="boton-volver" href="tienda.html">
+                            <!-- icono de flecha para volver -->
+                            <i class="fa-sharp fa-solid fa-arrow-left" style="color: #0033ff;"></i> Seguir comprando
+                        </a>
+                    </li>
+                    <li>
+                        <!-- enlace directo al carrito -->
+                        <a class="boton-carrito" href="carrito.html">
+                            <!-- icono para el carrito de compra -->
+                            <i class="fa-sharp fa-solid fa-cart-shopping" style="color: #0033ff;"></i> Carrito <span class="numero">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Pie del aside con el copyright -->
+            <footer>
+                <p class="texto-footer">&copy; 2025 Tienda de ropa online. Tus prendas al mejor precio.</p>
+            </footer>
+        </aside>
+
+        <!-- Sección principal con el estado del carrito, para ver si se encuentra vacío o con productos añadidos -->
+        <main>
+            <h2 class="principal">Estado de tu carrito actual</h2>
+            <div class="contenedor-carrito">
+                <!-- mensaje inicial con el carrito vacío -->
+                <p class="carrito-vacío">Tu carrito está vacío. <i class="fa-sharp fa-solid fa-face-frown" style="color: #0033ff;"></i></p>
+                <div class="carrito-productos">
+                    <div class="carrito-producto">
+                        <img src="img/pantalon1H.jpg" alt="Pantalón" title="Pantalón negro">
+                        <div class="carrito-producto-titulo">
+                            <small>Título</small>
+                            <h3>Pantalón 01</h3>
+                        </div>
+                        <div class="carrito-producto-info">
+                            <div class="carrito-producto-cantidad">
+                                <small>Cantidad</small>
+                                <p>1</p>
+                            </div>
+                            <div class="carrito-producto-precio">
+                                <small>Precio</small>
+                                <p>20€</p>
+                            </div>
+                            <div class="carrito-producto-subtotal">
+                                <small>Subtotal</small>
+                                <p>20€</p>
+                            </div>
+                            <!-- boton de vaciar el carrito con el icono de la papelera para borrarlo y dejarlo a 0 -->
+                            <button class="carrito-producto-eliminar"><i class="fa-sharp fa-solid fa-trash" style="color: #0033ff;"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Última sección con las acciones del carrito, para vaciarlo o bien comprar los artículos, calculando el precio y el total de artículos -->
+                <div class="carrito-acciones">
+                    <div class="carrito-acciones-izquierda">
+                        <button class="carrito-acciones-vaciar">Vaciar carrito</button>
+                    </div>
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">0€</p>
+                        </div>
+                        <button class="carrito-acciones-comprar">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script con el kit de font awesome que muestra el icono de la papelera para borrar los productos que se han añadido al carrito -->
+    <script src="https://kit.fontawesome.com/90d03dec9f.js" crossorigin="anonymous"></script>
+    <!-- Script de JavaScript con las acciones del carrito para darle funcionalidad -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
